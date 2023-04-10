@@ -6,7 +6,7 @@
     "ecmaVersion": 2022,
     "project": "./tsconfig.json"
   },
-  "ignorePatterns": ["*.config.js", "/src/app"],
+  "ignorePatterns": ["*.config.js", "/src/app", "/src/pages"],
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended",
