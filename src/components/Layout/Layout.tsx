@@ -4,6 +4,7 @@ import { Nav } from "../Nav/Nav"
 import { useAppContext } from "@/context/AppContext"
 import { MobileNav } from "../MobileNav/MobileNav"
 import { ComponentChildren } from "@/types/types"
+import { AnimatePresence } from "framer-motion"
 
 export const Layout: React.FC<ComponentChildren> = ({ children }) => {
   const { app } = useAppContext()
@@ -20,9 +21,9 @@ export const Layout: React.FC<ComponentChildren> = ({ children }) => {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className="min-h-screen bg-customGreen-backgrond">
-        {app?.mobileNavOn && <MobileNav />}
+        <AnimatePresence>{app?.mobileNavOn && <MobileNav />}</AnimatePresence>
         <Nav />
-        <main className="">{children}</main>
+        <main>{children}</main>
       </div>
     </Fragment>
   )

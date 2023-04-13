@@ -1,5 +1,9 @@
 export const navLinks = [
   {
+    label: "Strona główna",
+    href: "/oferta"
+  },
+  {
     label: "Oferta",
     href: "/oferta"
   },
