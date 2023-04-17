@@ -12,7 +12,7 @@ export const Layout: React.FC<ComponentChildren> = ({ children }) => {
   return (
     <Fragment>
       <Head key={"global_head"}>
-        <title>Marta Zarazińska - dietetyk</title>
+        <title>Marta Zarazińska - Dietetyk</title>
         <meta
           name="description"
           content="Pomogę Ci stać się lepszą wersją siebie dzięki zdrowszemu żywieniu."

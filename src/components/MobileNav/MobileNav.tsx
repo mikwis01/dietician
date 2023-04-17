@@ -9,7 +9,7 @@ export const MobileNav = () => {
   const { handleToggleMobileNav } = useAppContext()
 
   return (
-    <div className="fixed h-screen w-screen flex items-center justify-center z-20">
+    <div className="fixed h-screen w-screen flex items-center justify-center z-30">
       <motion.div
         className="w-[300vw] h-[300vw] bg-gradient-to-b from-customGreen-light to-customGreen-semiLight rounded-[50%] flex items-center justify-center flex-none relative"
         variants={scaleVariants}
