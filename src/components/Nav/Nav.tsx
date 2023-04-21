@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { MobileNavHamburger } from "@/components/MobileNavHamburger/MobileNavHamburger"
 import Image from "next/image"
-import Logo from "../../assets/MultiDiet.webp"
+import Logo from "@/assets/MultiDiet.webp"
 import { useMediaQuery } from "@/hooks/useMediaQuery"
 import { navLinks } from "@/constants/constants"
 

@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         customGreen: {
           backgrond: "#DDE4D4",
+          bluredBackground: "#CED9BF",
           light: "#B8DC89",
           semiLight: "#7AC242",
           semiDark: "#59AC18",
