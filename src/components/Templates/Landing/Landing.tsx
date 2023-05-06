@@ -11,22 +11,22 @@ export const Landing = () => {
     <article className="flex items-center justify-center min-h-screen">
       <div className="flex flex-col items-center min-h-screen justify-between pt-16 lg:flex-row lg:w-5/6">
         <section className="flex-1 w-5/6 flex flex-col justify-center items-center gap-8 my-8 min-[500px]:my-16 min-[500px]:text-center lg:w-1/2 lg:text-start lg:gap-12 lg:items-start 2xl:gap-16">
-          <h1 className="font-black text-xl w-full md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+          <h1 className="font-black text-xl w-full md:text-2xl lg:text-3xl xl:text-4xl">
             Problemy ze zdrowiem i sylwetką nie muszą być już Twoim zmartwieniem!
           </h1>
-          <h2 className="opacity-80 w-full md:text-lg lg:text-xl 2xl:text-2xl">
+          <h2 className="opacity-80 w-full md:text-lg lg:text-xl">
             Pomogę Ci stać się lepszą wersją siebie dzięki<br></br> zdrowszemu żywieniu.
           </h2>
           <ul className="w-full flex gap-5 text-sm font-bold text-center min-[500px]:justify-center lg:justify-start xl:text-lg">
             <motion.li
-              className="w-1/2 max-w-[12.5rem] h-12 bg-customGreen-button rounded-md text-white px-2 xl:h-14 xl:max-w-[15rem]"
+              className="w-1/2 max-w-[12.5rem] h-12 bg-customGreen-button rounded-md text-white px-2 xl:h-14 xl:max-w-[14rem]"
               whileTap={{ scale: 0.9 }}>
               <Link href={"/o-mnie"} className="w-full h-full grid place-items-center">
                 Poznaj mnie lepiej
               </Link>
             </motion.li>
             <motion.li
-              className="w-1/2 max-w-[12.5rem] h-12 border-customGreen-button border-[3px] rounded-md text-customGreen-semiLight px-2 xl:h-14 xl:max-w-[15rem]"
+              className="w-1/2 max-w-[12.5rem] h-12 border-customGreen-button border-[3px] rounded-md text-customGreen-semiLight px-2 xl:h-14 xl:max-w-[14rem]"
               whileTap={{ scale: 0.9 }}>
               <Link href={"/oferta"} className="w-full h-full grid place-items-center ">
                 Sprawdź moją ofertę
