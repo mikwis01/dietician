@@ -1,10 +1,10 @@
-import icon1 from "../assets/icon_1.png"
-import icon2 from "../assets/icon_2.png"
-import icon3 from "../assets/icon_3.png"
-import icon4 from "../assets/icon_4.png"
-import icon5 from "../assets/icon_5.png"
-import icon6 from "../assets/icon_6.png"
-import icon7 from "../assets/icon_7.png"
+import icon1 from "../assets/icon_1.webp"
+import icon2 from "../assets/icon_2.webp"
+import icon3 from "../assets/icon_3.webp"
+import icon4 from "../assets/icon_4.webp"
+import icon5 from "../assets/icon_5.webp"
+import icon6 from "../assets/icon_6.webp"
+import icon7 from "../assets/icon_7.webp"
 import { FaFacebookF, FaInstagram } from "react-icons/fa"
 
 export const navLinks = [

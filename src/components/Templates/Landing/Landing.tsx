@@ -35,24 +35,34 @@ export const Landing = () => {
           </ul>
         </section>
         <section className="relative lg:w-1/2">
-          <Image src={MobileBacground} alt="dasdsa" className="flex-1 max-h-96 lg:hidden" />
+          <Image
+            src={MobileBacground}
+            alt="Tło - Marta Zarazińska Dietetyk"
+            className="flex-1 max-h-96 lg:hidden"
+          />
           <Image
             src={MobileBacgroundPattern}
-            alt="dsds"
+            alt="Wzór - Marta Zarazińska Dietetyk"
             className="absolute top-3/4 w-40 min-[500px]:w-60 md:w-72 lg:hidden"
           />
           <Image
             src={MobileBacgroundPattern}
-            alt="dsds"
+            alt="Wzór - Marta Zarazińska Dietetyk"
             className="absolute top-1/3 right-0 w-40 min-[500px]:w-60 md:w-72 lg:hidden"
             priority={true}
           />
         </section>
         <div className="hidden absolute lg:block w-1/2 h-full right-0 top-0">
-          <Image src={DesktopBackground} alt="dasdsa" className="h-full w-4/5 right-0 absolute" />
+          <Image
+            src={DesktopBackground}
+            alt="Tło - Marta Zarazińska Dietetyk"
+            className="h-full w-4/5 right-0 absolute"
+          />
           <Image
             src={Dietician}
-            alt="dasdas"
+            alt="Marta Zarazińska Dietetyk"
+            priority={true}
+            fill={false}
             className="absolute bottom-0 right-0 w-11/12 max-w-6xl"
           />
         </div>
