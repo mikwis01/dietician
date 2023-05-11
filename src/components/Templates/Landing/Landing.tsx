@@ -44,16 +44,22 @@ export const Landing = () => {
             fill={false}
             alt="Tło - Marta Zarazińska Dietetyk"
             className="flex-1 max-h-96 lg:hidden"
+            width={1024}
+            height={727}
           />
           <Image
             src={MobileBacgroundPattern}
             alt="Wzór - Marta Zarazińska Dietetyk"
             className="absolute top-3/4 w-40 min-[500px]:w-60 md:w-72 lg:hidden"
+            width={613}
+            height={159}
           />
           <Image
             src={MobileBacgroundPattern}
             alt="Wzór - Marta Zarazińska Dietetyk"
             className="absolute top-1/3 right-0 w-40 min-[500px]:w-60 md:w-72 lg:hidden"
+            width={613}
+            height={159}
           />
         </section>
         <div className="hidden absolute lg:block w-1/2 h-full right-0 top-0">
@@ -62,6 +68,8 @@ export const Landing = () => {
             alt="Tło - Marta Zarazińska Dietetyk"
             priority={isDesktop}
             fill={false}
+            width={700}
+            height={1056}
             className="h-full w-4/5 right-0 absolute"
           />
           <Image
@@ -69,6 +77,8 @@ export const Landing = () => {
             alt="Marta Zarazińska Dietetyk"
             priority={isDesktop}
             fill={false}
+            width={1000}
+            height={1000}
             className="absolute bottom-0 right-0 w-11/12 max-w-6xl"
           />
         </div>
