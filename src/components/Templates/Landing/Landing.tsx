@@ -5,11 +5,8 @@ import DesktopBackground from "@/assets/DesktopBackground.webp"
 import Dietician from "@/assets/Dietician.webp"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { useMediaQuery } from "@/hooks/useMediaQuery"
 
 export const Landing = () => {
-  const isDesktop = useMediaQuery("(min-width: 1024px)")
-
   return (
     <article className="flex items-center justify-center min-h-screen">
       <div className="flex flex-col items-center min-h-screen justify-between pt-16 lg:flex-row lg:w-5/6">
@@ -40,8 +37,6 @@ export const Landing = () => {
         <section className="relative lg:w-1/2">
           <Image
             src={MobileBacground}
-            priority={!isDesktop}
-            fill={false}
             alt="Tło - Marta Zarazińska Dietetyk"
             className="flex-1 max-h-96 lg:hidden"
             width={1024}
@@ -66,8 +61,6 @@ export const Landing = () => {
           <Image
             src={DesktopBackground}
             alt="Tło - Marta Zarazińska Dietetyk"
-            priority={isDesktop}
-            fill={false}
             width={700}
             height={1056}
             className="h-full w-4/5 right-0 absolute"
@@ -75,8 +68,6 @@ export const Landing = () => {
           <Image
             src={Dietician}
             alt="Marta Zarazińska Dietetyk"
-            priority={isDesktop}
-            fill={false}
             width={1000}
             height={1000}
             className="absolute bottom-0 right-0 w-11/12 max-w-6xl"
