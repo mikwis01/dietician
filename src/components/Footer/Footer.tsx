@@ -3,9 +3,9 @@ import styles from "../../styles/Underline.module.css"
 
 export const Footer = () => {
   return (
-    <footer className="h-[50vh] max-h-[400px] w-full mt-20 bg-gradient-to-b from-customGreen-light to-customGreen-semiLight flex flex-col text-white font-bold justify-center items-center">
-      <div className="h-[50vh] max-h-[400px] w-full absolute bg-[url('../assets/FooterBackground.webp')] bg-no-repeat bg-center bg-cover lg:opacity-70" />
-      <div className="h-[50vh] max-h-[400px] absolute w-5/6 py-6 flex flex-col gap-6 justify-between max-w-[1200px]">
+    <footer className="h-[350px] w-full mt-20 bg-gradient-to-b from-customGreen-light to-customGreen-semiLight flex flex-col text-white font-bold justify-center items-center">
+      <div className="h-[350px] w-full absolute bg-[url('../assets/FooterBackground.webp')] bg-no-repeat bg-center bg-cover lg:opacity-70" />
+      <div className="h-[350px] absolute w-5/6 py-6 flex flex-col gap-6 justify-between max-w-[1200px]">
         <div className="flex flex-col gap-8">
           <h3 className={`text-lg ${styles.underline} lg:text-2xl`}>
             Nie trać więcej czasu na nieskuteczne metody i zacznij już dziś!
