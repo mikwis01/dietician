@@ -8,8 +8,8 @@ import { motion } from "framer-motion"
 
 export const Landing = () => {
   return (
-    <article className="flex items-center justify-center min-h-screen">
-      <div className="flex flex-col items-center min-h-screen justify-between pt-16 lg:flex-row lg:w-5/6">
+    <article className="flex items-center justify-center min-h-screen xl:min-h-[1080px]">
+      <div className="flex flex-col items-center justify-between min-h-screen xl:min-h-[1080px] pt-16 lg:flex-row lg:w-5/6 max-w-[1200px]">
         <section className="flex-1 w-5/6 flex flex-col justify-center items-center gap-8 my-8 min-[500px]:my-16 min-[500px]:text-center lg:w-1/2 lg:text-start lg:gap-12 lg:items-start 2xl:gap-16">
           <h1 className="font-black text-xl w-full md:text-2xl lg:text-3xl xl:text-4xl">
             Problemy ze zdrowiem i sylwetką nie muszą być już Twoim zmartwieniem!
@@ -57,7 +57,7 @@ export const Landing = () => {
             height={159}
           />
         </section>
-        <div className="hidden absolute lg:block w-1/2 h-full right-0 top-0">
+        <div className="hidden absolute lg:block w-1/2 h-full xl:h-[1080px] right-0 top-0">
           <Image
             src={DesktopBackground}
             alt="Tło - Marta Zarazińska Dietetyk"
@@ -70,7 +70,7 @@ export const Landing = () => {
             alt="Marta Zarazińska Dietetyk"
             width={1000}
             height={1000}
-            className="absolute bottom-0 right-0 w-11/12 max-w-6xl"
+            className="absolute bottom-0 w-11/12 max-w-3xl"
           />
         </div>
       </div>

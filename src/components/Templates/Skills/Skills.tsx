@@ -4,8 +4,8 @@ import React from "react"
 
 export const Skills = () => {
   return (
-    <article className="flex items-center justify-center mt-8 lg:mt-8 lg:min-h-screen">
-      <div className="w-full flex flex-col items-center gap-6 lg:flex-row-reverse lg:w-5/6 lg:min-h-[832px]">
+    <article className="flex items-center justify-center mt-8 lg:mt-20">
+      <div className="w-full flex flex-col items-center gap-6 lg:flex-row-reverse lg:w-5/6 lg:min-h-[832px] max-w-[1200px]">
         <div className="w-5/6 flex flex-col items-center gap-6 lg:w-2/3 lg:min-h-[832px]">
           <Header
             text={
