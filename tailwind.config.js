@@ -17,6 +17,10 @@ module.exports = {
           dark: "#48821A",
           button: "#97D466"
         }
+      },
+      screens: {
+        desktopHeight: { raw: "(min-height: 1080px)" },
+        desktopHeightLarge: { raw: "(min-height: 1200px)" }
       }
     }
   },

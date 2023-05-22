@@ -17,3 +17,12 @@ export const slideFromBottomVariants = {
     opacity: 1
   }
 }
+
+export const slideFromBottomVariantsMinimal = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1
+  }
+}
