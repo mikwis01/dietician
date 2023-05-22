@@ -6,7 +6,7 @@ export const Header = forwardRef((props: { text: string }, ref: Ref<HTMLDivEleme
 
   return (
     <div
-      className={`w-full text-lg bg-customGreen-bluredBackground/75 backdrop-blur-sm rounded-md p-4 font-bold ${styles.underline} lg:w-full lg:text-2xl`}
+      className={`w-full text-lg bg-customGreen-bluredBackground/75 rounded-md p-4 font-bold ${styles.underline} lg:w-full lg:text-2xl`}
       ref={ref}>
       <h3>{text}</h3>
     </div>
