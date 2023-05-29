@@ -7,6 +7,7 @@ import Link from "next/link"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 import { slideFromBottomVariantsMinimal } from "@/utils/motion"
+import ScrollDown from "@/assets/ScrollDown.png"
 
 export const Landing = () => {
   const ref = useRef(null)
@@ -75,6 +76,13 @@ export const Landing = () => {
           />
         </section>
         <div className="hidden absolute lg:block w-1/2 h-full desktopHeight:h-[1080px] desktopHeightLarge:h-[1200px] right-0 top-0">
+          <Image
+            src={ScrollDown}
+            alt="Zescrolluj niżej"
+            width={25}
+            height={25}
+            className="absolute bottom-5 left-0 animate-bounce z-40"
+          />
           <Image
             src={DesktopBackground}
             alt="Tło - Marta Zarazińska Dietetyk"
