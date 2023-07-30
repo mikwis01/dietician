@@ -3,6 +3,7 @@ import styles from "../../styles/Underline.module.css"
 import { slideFromBottomVariantsMinimal } from "@/utils/motion"
 import { useFadeIn } from "@/hooks/useFadeIn"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export const Footer = () => {
   const { ref, mainControls } = useFadeIn()
@@ -20,6 +21,13 @@ export const Footer = () => {
           <h3 className={`text-lg ${styles.underline} lg:text-2xl`} ref={ref}>
             Nie trać więcej czasu na nieskuteczne metody i zacznij już dziś!
           </h3>
+          <motion.button
+            className="w-1/2 max-w-[12.5rem] h-12 border-white border-[3px] rounded-md text-white px-2 xl:h-14 xl:max-w-[14rem]"
+            whileTap={{ scale: 0.9 }}>
+            <Link href={"/oferta"} className="w-full h-full grid place-items-center ">
+              Sprawdź moją ofertę
+            </Link>
+          </motion.button>
           <ul className="flex flex-col gap-4 text-sm lg:text-lg">
             {contactLinks.map((item) => (
               <li className="flex items-center gap-4" key={item.content}>

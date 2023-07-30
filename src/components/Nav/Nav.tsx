@@ -9,7 +9,7 @@ export const Nav = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
   return (
-    <nav className="w-full h-16 grid place-items-center fixed z-20 bg-customGreen-backgrond/50 backdrop-blur-sm lg:text-xl">
+    <nav className="w-full h-16 grid place-items-center fixed z-20 bg-black/5 backdrop-blur-lg">
       <div className="w-5/6 h-full flex items-center justify-between max-w-[1200px]">
         <Image src={Logo} alt={"Dietetyk Marta Zarazińska"} className="w-28" />
         {isDesktop ? (
