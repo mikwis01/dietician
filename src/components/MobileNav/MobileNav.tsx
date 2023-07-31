@@ -35,7 +35,11 @@ export const MobileNav = () => {
             animate={"visible"}
             transition={{ delay: 0.25 }}>
             {navLinks.map((item, i) => (
-              <motion.li key={i} whileTap={{ scale: 0.9 }} className="text-lg">
+              <motion.li
+                key={i}
+                whileTap={{ scale: 0.9 }}
+                className="text-lg"
+                onClick={handleToggleMobileNav}>
                 <Link href={item.href}>{item.label}</Link>
               </motion.li>
             ))}

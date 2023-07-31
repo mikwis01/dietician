@@ -29,13 +29,13 @@ export const Landing = () => {
       ref={ref}>
       <div className="flex flex-col items-center justify-between min-h-screen pt-16 lg:flex-row lg:w-5/6 max-w-[1200px]">
         <section className="flex-1 w-5/6 flex flex-col justify-center items-center gap-8 my-8 min-[500px]:my-16 min-[500px]:text-center lg:w-1/2 lg:text-start lg:gap-12 lg:items-start 2xl:gap-16">
-          <h1 className="font-black text-xl w-full md:text-2xl lg:text-3xl xl:text-4xl">
+          <h1 className="font-black text-xl w-full md:text-2xl lg:text-3xl xl:text-4xl sm:text-center lg:text-left">
             Problemy ze zdrowiem i sylwetką nie muszą być już Twoim zmartwieniem!
           </h1>
-          <h2 className="opacity-80 w-full md:text-lg lg:text-xl">
+          <h2 className="opacity-80 w-full md:text-lg lg:text-xl sm:text-center lg:text-left">
             Pomogę Ci stać się lepszą wersją siebie dzięki<br></br> zdrowszemu żywieniu.
           </h2>
-          <ul className="w-full flex gap-5 text-sm font-bold text-center min-[500px]:justify-center lg:justify-start xl:text-lg">
+          <ul className="w-full flex gap-5 text-sm font-bold text-center lg:justify-start xl:text-lg sm:justify-center">
             <motion.li
               className="w-1/2 max-w-[12.5rem] h-12 bg-customGreen-button rounded-md text-white px-2 xl:h-14 xl:max-w-[14rem]"
               whileTap={{ scale: 0.9 }}>
