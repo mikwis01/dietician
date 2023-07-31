@@ -9,7 +9,7 @@ export const Skills = () => {
 
   return (
     <motion.article
-      className="flex items-center justify-center mt-8 lg:mt-20 desktopHeightLarge:mt-0"
+      className="flex items-center justify-center mt-8 lg:mt-20"
       variants={slideFromBottomVariantsMinimal}
       initial={"hidden"}
       animate={mainControls}

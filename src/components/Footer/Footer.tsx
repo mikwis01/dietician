@@ -9,10 +9,10 @@ export const Footer = () => {
   const { ref, mainControls } = useFadeIn()
 
   return (
-    <footer className="h-[350px] w-full mt-20 bg-gradient-to-b from-customGreen-light to-customGreen-semiLight flex flex-col text-white font-bold justify-center items-center">
-      <div className="h-[350px] w-full absolute bg-[url('../assets/FooterBackground.webp')] bg-no-repeat bg-center bg-cover lg:opacity-70" />
+    <footer className="h-[370px] w-full mt-20 bg-gradient-to-b from-customGreen-light to-customGreen-semiLight flex flex-col text-white font-bold justify-center items-center">
+      <div className="h-[370px] w-full absolute bg-[url('../assets/FooterBackground.webp')] bg-no-repeat bg-center bg-cover lg:opacity-70" />
       <motion.div
-        className="h-[350px] absolute w-5/6 py-6 flex flex-col gap-6 justify-between max-w-[1200px]"
+        className="h-[370px] absolute w-5/6 py-6 flex flex-col gap-6 justify-between max-w-[1200px]"
         variants={slideFromBottomVariantsMinimal}
         initial={"hidden"}
         animate={mainControls}
@@ -22,7 +22,7 @@ export const Footer = () => {
             Nie trać więcej czasu na nieskuteczne metody i zacznij już dziś!
           </h3>
           <motion.button
-            className="w-1/2 max-w-[12.5rem] h-12 border-white border-[3px] rounded-md text-white px-2 xl:h-14 xl:max-w-[14rem]"
+            className="w-1/2 max-w-[12.5rem] h-14 lg:h-12 border-white border-[3px] rounded-md text-white px-2 xl:h-14 xl:max-w-[14rem]"
             whileTap={{ scale: 0.9 }}>
             <Link href={"/oferta"} className="w-full h-full grid place-items-center ">
               Sprawdź moją ofertę

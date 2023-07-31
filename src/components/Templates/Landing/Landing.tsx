@@ -22,12 +22,12 @@ export const Landing = () => {
 
   return (
     <motion.article
-      className="flex items-center justify-center min-h-screen desktopHeight:h-[1080px] desktopHeightLarge:h-[1200px]"
+      className="flex items-center justify-center min-h-screen"
       variants={slideFromBottomVariantsMinimal}
       initial={"hidden"}
       animate={mainControls}
       ref={ref}>
-      <div className="flex flex-col items-center justify-between min-h-screen desktopHeight:h-[1080px] desktopHeightLarge:h-[1200px] pt-16 lg:flex-row lg:w-5/6 max-w-[1200px]">
+      <div className="flex flex-col items-center justify-between min-h-screen pt-16 lg:flex-row lg:w-5/6 max-w-[1200px]">
         <section className="flex-1 w-5/6 flex flex-col justify-center items-center gap-8 my-8 min-[500px]:my-16 min-[500px]:text-center lg:w-1/2 lg:text-start lg:gap-12 lg:items-start 2xl:gap-16">
           <h1 className="font-black text-xl w-full md:text-2xl lg:text-3xl xl:text-4xl">
             Problemy ze zdrowiem i sylwetką nie muszą być już Twoim zmartwieniem!
@@ -75,7 +75,7 @@ export const Landing = () => {
             height={159}
           />
         </section>
-        <div className="hidden absolute lg:block w-1/2 h-full desktopHeight:h-[1080px] desktopHeightLarge:h-[1200px] right-0 top-0">
+        <div className="hidden absolute lg:block w-1/2 h-full right-0 top-0">
           <Image
             src={ScrollDown}
             alt="Zescrolluj niżej"
@@ -88,7 +88,7 @@ export const Landing = () => {
             alt="Tło - Marta Zarazińska Dietetyk"
             width={700}
             height={1056}
-            className="h-full w-4/5 right-0 absolute"
+            className="h-full w-5/6 right-0 absolute"
           />
           <Image
             src={Dietician}

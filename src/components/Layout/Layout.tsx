@@ -3,10 +3,10 @@ import Head from "next/head"
 import { Nav } from "../Nav/Nav"
 import { useAppContext } from "@/context/AppContext"
 import { MobileNav } from "../MobileNav/MobileNav"
-import { ComponentChildren } from "@/types/types"
+import { LayoutInterface } from "@/types/types"
 import { AnimatePresence } from "framer-motion"
 
-export const Layout: React.FC<ComponentChildren> = ({ children }) => {
+export const Layout: React.FC<LayoutInterface> = ({ children, dynamicLogo }) => {
   const { app } = useAppContext()
 
   return (
@@ -22,7 +22,7 @@ export const Layout: React.FC<ComponentChildren> = ({ children }) => {
       </Head>
       <div className="min-h-screen bg-customGreen-backgrond">
         <AnimatePresence>{app?.mobileNavOn && <MobileNav />}</AnimatePresence>
-        <Nav />
+        <Nav dynamicLogo={dynamicLogo} />
         <main>{children}</main>
       </div>
     </Fragment>

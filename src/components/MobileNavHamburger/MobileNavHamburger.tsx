@@ -7,7 +7,7 @@ export const MobileNavHamburger = () => {
 
   return (
     <motion.button
-      className="h-8 w-8 bg-gradient-to-b from-customGreen-light to-customGreen-semiLight rounded grid place-items-center"
+      className="h-8 w-8 bg-gradient-to-b from-customGreen-semiLight to-customGreen-semiDark rounded grid place-items-center"
       onClick={handleToggleMobileNav}
       whileTap={{ scale: 0.9 }}>
       <RiMenu3Line size={22} color="white" />

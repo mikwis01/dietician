@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer/Footer"
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout dynamicLogo={true}>
       <Landing />
       <Skills />
       <PartnershipValues />
