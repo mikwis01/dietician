@@ -5,12 +5,12 @@ import { PartnershipValues } from "@/components/Templates/PartnershipValues/Part
 import { Footer } from "@/components/Footer/Footer"
 
 export default function Home() {
-  return (
-    <Layout dynamicLogo={true}>
-      <Landing />
-      <Skills />
-      <PartnershipValues />
-      <Footer />
-    </Layout>
-  )
+    return (
+        <Layout dynamicLogo={true}>
+            <Landing />
+            <Skills />
+            <PartnershipValues />
+            <Footer />
+        </Layout>
+    )
 }

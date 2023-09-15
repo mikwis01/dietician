@@ -7,24 +7,24 @@ import { LayoutInterface } from "@/types/types"
 import { AnimatePresence } from "framer-motion"
 
 export const Layout: React.FC<LayoutInterface> = ({ children, dynamicLogo }) => {
-  const { app } = useAppContext()
+    const { app } = useAppContext()
 
-  return (
-    <Fragment>
-      <Head key={"global_head"}>
-        <title>Marta Zarazińska - Dietetyk</title>
-        <meta
-          name="description"
-          content="Pomogę Ci stać się lepszą wersją siebie dzięki zdrowszemu żywieniu."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-      </Head>
-      <div className="min-h-screen bg-customGreen-backgrond">
-        <AnimatePresence>{app?.mobileNavOn && <MobileNav />}</AnimatePresence>
-        <Nav dynamicLogo={dynamicLogo} />
-        <main>{children}</main>
-      </div>
-    </Fragment>
-  )
+    return (
+        <Fragment>
+            <Head key={"global_head"}>
+                <title>Marta Zarazińska - Dietetyk</title>
+                <meta
+                    name="description"
+                    content="Pomogę Ci stać się lepszą wersją siebie dzięki zdrowszemu żywieniu."
+                />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                {/* <link rel="icon" href="/favicon.ico" /> */}
+            </Head>
+            <div className="min-h-screen bg-customGreen-backgrond">
+                <AnimatePresence>{app?.mobileNavOn && <MobileNav />}</AnimatePresence>
+                <Nav dynamicLogo={dynamicLogo} />
+                <main>{children}</main>
+            </div>
+        </Fragment>
+    )
 }

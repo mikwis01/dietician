@@ -1,28 +1,28 @@
 export const scaleVariants = {
-  hidden: {
-    scale: 0
-  },
-  visible: {
-    scale: 1
-  }
+    hidden: {
+        scale: 0
+    },
+    visible: {
+        scale: 1
+    }
 }
 
 export const slideFromBottomVariants = {
-  hidden: {
-    y: 100,
-    opacity: 0
-  },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
+    hidden: {
+        y: 100,
+        opacity: 0
+    },
+    visible: {
+        y: 0,
+        opacity: 1
+    }
 }
 
 export const slideFromBottomVariantsMinimal = {
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  }
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
+    }
 }
