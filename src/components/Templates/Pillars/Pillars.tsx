@@ -21,7 +21,12 @@ export const Pillars = () => {
                 </div>
                 <div className="w-5/6 grid grid-rows-1 grid-cols-1 gap-6 sm:grid-rows-2 sm:grid-cols-2 lg:w-full lg:grid-rows-1 lg:grid-cols-4">
                     {pillars.map((item) => (
-                        <Pillar icon={item.icon} header={item.header} content={item.content} />
+                        <Pillar
+                            key={item.header}
+                            icon={item.icon}
+                            header={item.header}
+                            content={item.content}
+                        />
                     ))}
                 </div>
             </div>

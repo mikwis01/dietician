@@ -14,3 +14,10 @@ export interface PillarInterface {
     header: string
     content: string
 }
+
+export interface OfferTileInterface {
+    header: string
+    price: number
+    items: string[]
+    isLastItem: boolean
+}

@@ -76,7 +76,7 @@ export const contactLinks = [
     },
     {
         icon: icon6,
-        content: "kontakt@mariazarazinska.pl"
+        content: "kontakt@martazarazinska.pl"
     }
 ]
 
@@ -106,5 +106,49 @@ export const pillars = [
         header: "Edukacja",
         content:
             "Wprowadzanie zdrowych nawyków wymaga czasu, pracy i wiedzy. Wykorzystując różne techniki i uczę Cię jak przejść przez ten proces w taki sposób, aby efekty zostały z Tobą na długo."
+    }
+]
+
+export const offerTiles = [
+    {
+        header: "Pierwsza konsultacja",
+        price: 230,
+        items: [
+            "szczegółowy wywiad żywieniowo-zdrowotny",
+            "interpretacja wyników badań",
+            "omówienie dotychczasowych błędów dietetycznych",
+            "opracowanie indywidualnej strategii działania, sprecycowanie zadań",
+            "spersonalizowane <b>zalecenia</b> dotyczące żywienia i stylu życia",
+            "plan suplementacji",
+            "podsumowanie konsultacji wysłane na maila",
+            "spersonalizowany <b>1 tygodniowy jadłospis</b> w formie PDF wraz z listą zakupów"
+        ]
+    },
+    {
+        header: "Kolejna konsultacja",
+        price: 150,
+        items: [
+            "analiza i omówienie dotychczasowych postępów dietoterapii",
+            "weryfikacja wcześniejszej strategii działania i ustalenie nowej",
+            "modyfikacja dotychczasowego jadłospisu lub stworzenie nowego uwzględniającego zmiany, uwagi i sugestie",
+            "spersonalizowane zalecenia  dopasowane do celu diety (np. odchudzania, poprawy stanu zdrowia)",
+            "spersonalizowane <b>zalecenia</b> dotyczące żywienia i stylu życia",
+            "weryfikacja planu suplementacyjnego, wprowadzenie ewentualnych zmian",
+            "podsumowanie konsultacji wysłane na maila",
+            "spersonalizowany <b>1 tygodniowy jadłospis</b> w formie PDF wraz z listą zakupów"
+        ]
+    },
+    {
+        header: "Konsultacja dietetyczno-zdrowotna",
+        price: 130,
+        items: [
+            "szczegółowy wywiad żywieniowo-zdrowotny",
+            "analiza dotychczasowego żywienia i stylu życia oraz omówienie błędów",
+            "interpretacja wyników badań",
+            "spersonalizowane wskazówki dotyczące udoskonalenia żywienia ",
+            "opracowanie indywidualnej strategii i dalszych działań",
+            "zalecenia dotyczące żywienia i stylu życia",
+            "podsumowanie konsultacji wysłane na maila"
+        ]
     }
 ]
