@@ -20,7 +20,7 @@ export const Offer = () => {
                 <div className="w-5/6 lg:w-full">
                     <Header ref={ref} text={"Opieka i konsultacje dietetyczne"} />
                 </div>
-                <div className="w-full bg-customGreen-bluredBackground/75 rounded-md p-4 lg:w-full">
+                <div className="w-5/6 bg-customGreen-bluredBackground/75 rounded-md p-4 lg:w-full">
                     <p className="font-bold mb-4">
                         Masz pytania dotyczące Twojej diety, suplementacji, stanu zdrowia, które
                         chcesz omówić ze mną?{" "}
