@@ -14,7 +14,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa"
 export const navLinks = [
     {
         label: "Strona główna",
-        href: "/oferta"
+        href: "/"
     },
     {
         label: "Oferta",
@@ -152,3 +152,24 @@ export const offerTiles = [
         ]
     }
 ]
+
+export const coopText = [
+    "Nie umiesz naprawić swoich relacji z jedzeniem",
+    "Nie radzisz sobie z ciągłym podjadaniem i nieumiejętnością rezygnacji z jedzenia",
+    "Ciągle katujesz się dietami",
+    "Nie chcesz wrócić do efektu jojo"
+]
+
+export const helpText = [
+    "Schudniesz bezpiecznie, zdrowo i na stałe",
+    "Zaczniesz jeść świadomie i odzyskasz kontrolę nad jedzeniem",
+    "Wesprzesz leczenie swoich chorób dobrze dobraną dietą",
+    "Pożegnasz objadanie się",
+    "Nauczysz się przygotowywać smaczne, szybkie i zdrowe posiłki"
+]
+
+export const nameRegex = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]{1,99} [A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]{1,99}$/
+
+export const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+export const messageRegex = /^.{3,500}$/

@@ -15,7 +15,8 @@ module.exports = {
                     semiLight: "#7AC242",
                     semiDark: "#59AC18",
                     dark: "#48821A",
-                    button: "#97D466"
+                    button: "#97D466",
+                    formBackground: "#C8D2BA"
                 }
             }
         }

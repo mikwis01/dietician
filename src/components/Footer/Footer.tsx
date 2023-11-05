@@ -9,7 +9,7 @@ export const Footer = () => {
     const { ref, mainControls } = useFadeIn()
 
     return (
-        <footer className="h-[370px] w-full mt-20 bg-gradient-to-b from-customGreen-light to-customGreen-semiLight flex flex-col text-white font-bold justify-center items-center">
+        <footer className="h-[370px] w-full bg-gradient-to-b from-customGreen-light to-customGreen-semiLight flex flex-col text-white font-bold justify-center items-center">
             <div className="h-[370px] w-full absolute bg-[url('../assets/FooterBackground.webp')] bg-no-repeat bg-center bg-cover lg:opacity-70" />
             <motion.div
                 className="h-[370px] absolute w-5/6 py-6 flex flex-col gap-6 justify-between max-w-[1200px]"

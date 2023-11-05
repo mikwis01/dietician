@@ -1,8 +1,10 @@
 import { StaticImageData } from "next/image"
+import { Dispatch, SetStateAction } from "react"
 
 export interface LayoutInterface {
     children?: React.ReactNode
     dynamicLogo: boolean
+    noPt?: boolean
 }
 
 export interface DynamicLogo {
@@ -20,4 +22,10 @@ export interface OfferTileInterface {
     price: number
     items: string[]
     isLastItem: boolean
+    handleOfferModal: (offer: string) => void
+}
+
+export interface OfferModalInterface {
+    pickedOffer: string
+    setShowModal: Dispatch<SetStateAction<boolean>>
 }

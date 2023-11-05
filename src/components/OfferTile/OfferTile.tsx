@@ -2,9 +2,14 @@ import { motion } from "framer-motion"
 import { OfferTileInterface } from "@/types/types"
 import React from "react"
 import check from "../../assets/check.png"
-import Link from "next/link"
 
-export const OfferTile: React.FC<OfferTileInterface> = ({ price, header, items, isLastItem }) => {
+export const OfferTile: React.FC<OfferTileInterface> = ({
+    price,
+    header,
+    items,
+    isLastItem,
+    handleOfferModal
+}) => {
     return (
         <div
             className={`bg-customGreen-bluredBackground/75 w-full rounded-md flex flex-col ${
@@ -14,7 +19,7 @@ export const OfferTile: React.FC<OfferTileInterface> = ({ price, header, items, 
                 <p className="text-sm drop-shadow-lg">{header}</p>
                 <h3 className="text-2xl">
                     {price} zł
-                    <span className="text-sm">{` /1 godzina`}</span>
+                    <span className="text-sm"> /1 godzina</span>
                 </h3>
             </div>
             <div className="px-4 pt-8 pb-4">
@@ -32,11 +37,11 @@ export const OfferTile: React.FC<OfferTileInterface> = ({ price, header, items, 
             <motion.div
                 className="w-full flex justify-center pb-4 m-auto"
                 whileTap={{ scale: 0.9 }}>
-                <Link
-                    href={"/kontakt"}
-                    className="w-2/3 bg-customGreen-button rounded-md text-white p-4 grid place-items-center">
+                <button
+                    onClick={() => handleOfferModal(header)}
+                    className="w-2/3 bg-customGreen-button rounded-md text-white p-4 grid place-items-center font-bold">
                     Wybierz pakiet
-                </Link>
+                </button>
             </motion.div>
         </div>
     )

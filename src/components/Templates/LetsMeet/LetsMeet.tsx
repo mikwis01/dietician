@@ -9,7 +9,7 @@ export const LetsMeet = () => {
 
     return (
         <motion.article
-            className="flex items-center justify-center pt-24 lg:pt-32"
+            className="flex items-center justify-center"
             variants={slideFromBottomVariantsMinimal}
             initial={"hidden"}
             animate={mainControls}

@@ -1,13 +1,21 @@
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { slideFromBottomVariantsMinimal } from "@/utils/motion"
 import { useFadeIn } from "@/hooks/useFadeIn"
 import { Header } from "@/components/Header/Header"
 import { offerTiles } from "@/constants/constants"
 import { OfferTile } from "@/components/OfferTile/OfferTile"
 import Link from "next/link"
+import { useState } from "react"
+import { OfferModal } from "@/components/OfferModal/OfferModal"
 
 export const Offer = () => {
     const { ref, mainControls } = useFadeIn()
+    const [showModal, setShowModal] = useState(false)
+    const [pickedOffer, setPickedOffer] = useState("")
+    const handleOfferModal = (offer: string) => {
+        setShowModal(true)
+        setPickedOffer(offer)
+    }
 
     return (
         <motion.article
@@ -23,10 +31,10 @@ export const Offer = () => {
                 <div className="w-5/6 bg-customGreen-bluredBackground/75 rounded-md p-4 lg:w-full">
                     <p className="font-bold mb-4">
                         Masz pytania dotyczące Twojej diety, suplementacji, stanu zdrowia, które
-                        chcesz omówić ze mną?{" "}
+                        chcesz omówić ze mną?
                         <Link
-                            href="mailto:kontakt@martazarazinska.pl"
-                            className="text-customGreen-semiDark hover:underline">
+                            href="/kontakt"
+                            className="text-customGreen-semiDark hover:underline ml-1">
                             Napisz do mnie!
                         </Link>
                     </p>
@@ -44,10 +52,16 @@ export const Offer = () => {
                             price={offer.price}
                             items={offer.items}
                             isLastItem={i === offerTiles.length - 1}
+                            handleOfferModal={handleOfferModal}
                         />
                     ))}
                 </div>
             </div>
+            {showModal && (
+                <AnimatePresence>
+                    <OfferModal pickedOffer={pickedOffer} setShowModal={setShowModal} />
+                </AnimatePresence>
+            )}
         </motion.article>
     )
 }
