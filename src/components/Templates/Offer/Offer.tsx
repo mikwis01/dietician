@@ -1,15 +1,13 @@
-import { AnimatePresence, motion } from "framer-motion"
-import { slideFromBottomVariantsMinimal } from "@/utils/motion"
-import { useFadeIn } from "@/hooks/useFadeIn"
+import { AnimatePresence } from "framer-motion"
 import { Header } from "@/components/Header/Header"
 import { offerTiles } from "@/constants/constants"
 import { OfferTile } from "@/components/OfferTile/OfferTile"
 import Link from "next/link"
 import { useState } from "react"
 import { OfferModal } from "@/components/OfferModal/OfferModal"
+import { AnimatedArticle } from "@/components/AnimatedArticle/AnimatedArticle"
 
 export const Offer = () => {
-    const { ref, mainControls } = useFadeIn()
     const [showModal, setShowModal] = useState(false)
     const [pickedOffer, setPickedOffer] = useState("")
     const handleOfferModal = (offer: string) => {
@@ -18,15 +16,10 @@ export const Offer = () => {
     }
 
     return (
-        <motion.article
-            className="flex items-center justify-center mt-8 lg:mt-20"
-            variants={slideFromBottomVariantsMinimal}
-            initial={"hidden"}
-            animate={mainControls}
-            transition={{ delay: 0.25 }}>
+        <AnimatedArticle className="flex items-center justify-center mt-8 lg:mt-20">
             <div className="w-full flex flex-col items-center gap-6 lg:w-5/6 max-w-[1200px]">
                 <div className="w-5/6 lg:w-full">
-                    <Header ref={ref} text={"Opieka i konsultacje dietetyczne"} />
+                    <Header text={"Opieka i konsultacje dietetyczne"} />
                 </div>
                 <div className="w-5/6 bg-customGreen-bluredBackground/75 rounded-md p-4 lg:w-full">
                     <p className="font-bold mb-4">
@@ -62,6 +55,6 @@ export const Offer = () => {
                     <OfferModal pickedOffer={pickedOffer} setShowModal={setShowModal} />
                 </AnimatePresence>
             )}
-        </motion.article>
+        </AnimatedArticle>
     )
 }

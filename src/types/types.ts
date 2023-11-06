@@ -29,3 +29,8 @@ export interface OfferModalInterface {
     pickedOffer: string
     setShowModal: Dispatch<SetStateAction<boolean>>
 }
+
+export interface AnimatedArticleInterface {
+    children?: React.ReactNode
+    className?: string
+}
