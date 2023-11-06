@@ -34,3 +34,8 @@ export interface AnimatedArticleInterface {
     children?: React.ReactNode
     className?: string
 }
+
+export interface ContactFormInterface {
+    setIsError: Dispatch<SetStateAction<string>>
+    setIsSuccess: Dispatch<SetStateAction<boolean>>
+}

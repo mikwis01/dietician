@@ -1,4 +1,4 @@
-import { Contact } from "@/components/Contact/Contact"
+import { Contact } from "@/components/Templates/Contact/Contact"
 import { Layout } from "@/components/Layout/Layout"
 
 export default function OfferView() {

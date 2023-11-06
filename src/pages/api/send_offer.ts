@@ -16,10 +16,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 await transporter.sendMail({
                     ...mailOptions,
                     subject: "Strona dietetyk: Wiadomość od klienta",
-                    text: `Witaj Marta! Ktoś właśnie wysłał chce skorzystać z twoich usług. Odezwij się do swojego nowego klienta! Imię: ${name}, Email: ${email}, ${
-                        offer && `Oferta: ${offer}`
-                    }, ${message && `Wiadomość: ${message}`}`,
-                    html: `<h3>Witaj Marta! Ktoś właśnie wysłał chce skorzystać z twoich usług.</h3> 
+                    text: `Witaj Marta! Ktoś właśnie chce skorzystać z twoich usług. Odezwij się do swojego nowego klienta!`,
+                    html: `<h3>Witaj Marta! Ktoś właśnie chce skorzystać z twoich usług.</h3> 
 					<p>Odezwij się do swojego nowego klienta!</p>
 					<p><b>Imię:</b> ${name}</p>
 					<p><b>Email:</b> ${email}</p>

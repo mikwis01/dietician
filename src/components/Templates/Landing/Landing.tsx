@@ -64,7 +64,7 @@ export const Landing = () => (
                     alt="Zescrolluj niżej"
                     width={25}
                     height={25}
-                    className="absolute bottom-5 left-0 animate-bounce z-40"
+                    className="absolute bottom-5 left-0 animate-bounce z-[19]"
                 />
                 <Image
                     src={DesktopBackground}

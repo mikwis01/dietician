@@ -1,17 +1,16 @@
-import { emailRegex, nameRegex } from "@/constants/constants"
-import { Dispatch, SetStateAction, useState } from "react"
+import { useState } from "react"
+import { emailRegex, messageRegex, nameRegex } from "@/constants/constants"
 
-export const useOfferModal = (
-    setShowModal: Dispatch<SetStateAction<boolean>>,
-    pickedOffer: string
-) => {
+export const useContactForm = () => {
+    const [formError, setFormError] = useState("")
+    const [formLoading, setFormLoading] = useState(false)
+    const [formSuccess, setFormSuccess] = useState(false)
     const [name, setName] = useState("")
     const [nameIsValid, setNameIsValid] = useState(false)
     const [email, setEmail] = useState("")
     const [emailIsValid, setEmailIsValid] = useState(false)
-    const [formError, setFormError] = useState("")
-    const [formLoading, setFormLoading] = useState(false)
-    const [formSuccess, setFormSuccess] = useState(false)
+    const [message, setMessage] = useState("")
+    const [messageIsValid, setMessageIsValid] = useState(false)
 
     const handleName = (val: string) => {
         setName(val)
@@ -31,12 +30,23 @@ export const useOfferModal = (
         }
     }
 
+    const handleMessage = (val: string) => {
+        setMessage(val)
+        if (messageRegex.test(val)) {
+            setMessageIsValid(true)
+        } else {
+            setMessageIsValid(false)
+        }
+    }
+
     const resetForm = () => {
         setFormLoading(false)
         setName("")
         setNameIsValid(false)
         setEmail("")
         setEmailIsValid(false)
+        setMessage("")
+        setMessageIsValid(false)
     }
 
     const inputClass = (field: string, fieldValidation: boolean) =>
@@ -58,13 +68,12 @@ export const useOfferModal = (
                 body: JSON.stringify({
                     name,
                     email,
-                    offer: pickedOffer
+                    message
                 })
             })
             if (res.ok) {
                 resetForm()
                 setFormSuccess(true)
-                setTimeout(() => setShowModal(false), 5000)
             } else {
                 resetForm()
                 setFormError(
@@ -78,13 +87,15 @@ export const useOfferModal = (
     }
 
     return {
-        nameIsValid,
-        emailIsValid,
         formError,
         formLoading,
         formSuccess,
         name,
+        nameIsValid,
         email,
+        emailIsValid,
+        message,
+        messageIsValid,
         setName,
         setNameIsValid,
         setEmail,
@@ -94,8 +105,8 @@ export const useOfferModal = (
         setFormSuccess,
         handleName,
         handleEmail,
+        handleMessage,
         inputClass,
-        sendOffer,
-        resetForm
+        sendOffer
     }
 }

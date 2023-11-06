@@ -19,8 +19,9 @@ export const OfferModal: React.FC<OfferModalInterface> = ({ pickedOffer, setShow
         handleName,
         handleEmail,
         inputClass,
-        sendOffer
-    } = useOfferModal(pickedOffer, setShowModal)
+        sendOffer,
+        resetForm
+    } = useOfferModal(setShowModal, pickedOffer)
 
     return (
         <motion.div
@@ -35,7 +36,10 @@ export const OfferModal: React.FC<OfferModalInterface> = ({ pickedOffer, setShow
                     <h2 className="drop-shadow-lg text-lg lg:text-xl">{pickedOffer}</h2>
                     <motion.span
                         className="cursor-pointer"
-                        onClick={() => setShowModal(false)}
+                        onClick={() => {
+                            resetForm()
+                            setShowModal(false)
+                        }}
                         whileTap={{ scale: 0.9 }}>
                         <VscChromeClose size={35} color="white" />
                     </motion.span>
@@ -60,7 +64,7 @@ export const OfferModal: React.FC<OfferModalInterface> = ({ pickedOffer, setShow
                     className="bg-customGreen-bluredBackground/75 w-full rounded-md px-8 pb-8 flex flex-col gap-6">
                     <FormItemWrapper>
                         <label htmlFor="name" className="font-black">
-                            Imię i nazwisko
+                            Imię i nazwisko *
                         </label>
                         {name !== "" && !nameIsValid && (
                             <p className="text-sm text-red-500 pb-2">
@@ -79,7 +83,7 @@ export const OfferModal: React.FC<OfferModalInterface> = ({ pickedOffer, setShow
                     </FormItemWrapper>
                     <FormItemWrapper>
                         <label htmlFor="email" className="font-black">
-                            Email
+                            Email *
                         </label>
                         {email !== "" && !emailIsValid && (
                             <p className="text-sm text-red-500 pb-2">
