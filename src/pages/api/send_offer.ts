@@ -1,14 +1,27 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { transporter, mailOptions } from "@/config/nodemailer"
 import { emailRegex, messageRegex, nameRegex } from "@/constants/constants"
+const captchaSecret = process.env.RECAPTCHA_SECRET_KEY
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-    const { name, email, offer, message } = JSON.parse(req.body)
-    const securityConditionFailed = offer
-        ? !nameRegex.test(name) || !emailRegex.test(email)
-        : !nameRegex.test(name) || !emailRegex.test(email) || !messageRegex.test(message)
-
     if (req.method === "POST") {
+        const { name, email, offer, message, captcha } = JSON.parse(req.body)
+        const verificationURL = `https://www.google.com/recaptcha/api/siteverify`
+
+        const captchVerificationResponse = await fetch(verificationURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `secret=${captchaSecret}&response=${captcha}`
+        })
+
+        const captchaVerification = await captchVerificationResponse.json()
+
+        const securityConditionFailed = offer
+            ? !nameRegex.test(name) || !emailRegex.test(email) || !captchaVerification.success
+            : !nameRegex.test(name) || !emailRegex.test(email) || !messageRegex.test(message) || !captchaVerification.success
+
         if (securityConditionFailed) {
             return res.status(400).send({ message: "Bad request" })
         } else {

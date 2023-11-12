@@ -11,6 +11,7 @@ export const useContactForm = () => {
     const [emailIsValid, setEmailIsValid] = useState(false)
     const [message, setMessage] = useState("")
     const [messageIsValid, setMessageIsValid] = useState(false)
+    const [captcha, setCaptcha] = useState<string | null>()
 
     const handleName = (val: string) => {
         setName(val)
@@ -68,7 +69,8 @@ export const useContactForm = () => {
                 body: JSON.stringify({
                     name,
                     email,
-                    message
+                    message,
+                    captcha
                 })
             })
             if (res.ok) {
@@ -96,6 +98,8 @@ export const useContactForm = () => {
         emailIsValid,
         message,
         messageIsValid,
+        captcha,
+        setCaptcha,
         setName,
         setNameIsValid,
         setEmail,

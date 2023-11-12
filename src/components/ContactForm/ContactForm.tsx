@@ -3,6 +3,9 @@ import { FormItemWrapper } from "../FormItemWrapper/FormItemWrapper"
 import { useContactForm } from "./useContactForm"
 import { Spinner } from "../Spinner/Spinner"
 import { ContactFormInterface } from "@/types/types"
+// eslint-disable-next-line import/no-named-as-default
+import ReCAPTCHA from "react-google-recaptcha"
+const captchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
 export const ContactForm: React.FC<ContactFormInterface> = ({ setIsError, setIsSuccess }) => {
     const {
@@ -19,7 +22,9 @@ export const ContactForm: React.FC<ContactFormInterface> = ({ setIsError, setIsS
         handleEmail,
         handleMessage,
         inputClass,
-        sendOffer
+        sendOffer,
+        setCaptcha,
+        captcha
     } = useContactForm()
 
     useEffect(() => {
@@ -85,10 +90,17 @@ export const ContactForm: React.FC<ContactFormInterface> = ({ setIsError, setIsS
                     value={message}
                     onChange={(e) => handleMessage(e.target.value)}
                 />
+                {captchaSiteKey && (
+                    <ReCAPTCHA
+                        sitekey={captchaSiteKey}
+                        className="pt-2 ml-auto"
+                        onChange={setCaptcha}
+                    />
+                )}
             </FormItemWrapper>
             <div className="flex justify-center">
                 <button
-                    disabled={!nameIsValid || !emailIsValid || !messageIsValid}
+                    disabled={!nameIsValid || !emailIsValid || !messageIsValid || !captcha}
                     className="w-1/2 bg-customGreen-button rounded-md text-white p-4 grid place-items-center font-bold disabled:opacity-50">
                     {formLoading ? <Spinner /> : <span>Wyślij</span>}
                 </button>

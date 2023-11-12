@@ -3,7 +3,7 @@ export const LetsMeetContent = () => {
         <section className="w-full bg-customGreen-bluredBackground/75 p-4 rounded-md lg:w-full flex-1 flex flex-col lg:text-lg gap-12">
             <p className="font-bold xl:w-5/6">
                 Przygodę z odchudzaniem zaczynałam od zera. W pewnym momencie mojego życia
-                osiągnęłam (ile?) kg i miałam już dość. Nie byłam w stanie udźwignąć niepochlebnych
+                osiągnęłam 80 kg i miałam już dość. Nie byłam w stanie udźwignąć niepochlebnych
                 komentarzy, uszczypliwości i znaczących spojrzeń.
             </p>
             <p className="opacity-80 xl:w-5/6">

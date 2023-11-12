@@ -6,6 +6,9 @@ import { slideFromBottomVariantsMinimal } from "@/utils/motion"
 import { VscChromeClose } from "react-icons/vsc"
 import { Spinner } from "../Spinner/Spinner"
 import { useOfferModal } from "./useOfferModal"
+// eslint-disable-next-line import/no-named-as-default
+import ReCAPTCHA from "react-google-recaptcha"
+const captchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
 export const OfferModal: React.FC<OfferModalInterface> = ({ pickedOffer, setShowModal }) => {
     const {
@@ -20,7 +23,9 @@ export const OfferModal: React.FC<OfferModalInterface> = ({ pickedOffer, setShow
         handleEmail,
         inputClass,
         sendOffer,
-        resetForm
+        resetForm,
+		captcha,
+		setCaptcha
     } = useOfferModal(setShowModal, pickedOffer)
 
     return (
@@ -100,9 +105,16 @@ export const OfferModal: React.FC<OfferModalInterface> = ({ pickedOffer, setShow
                             onChange={(e) => handleEmail(e.target.value)}
                         />
                     </FormItemWrapper>
+					{captchaSiteKey && (
+						<ReCAPTCHA
+							sitekey={captchaSiteKey}
+							className="pt-2 ml-auto"
+							onChange={setCaptcha}
+						/>
+					)}
                     <div className="flex justify-center">
                         <button
-                            disabled={!nameIsValid || !emailIsValid}
+                            disabled={!nameIsValid || !emailIsValid || !captcha}
                             className="w-1/2 bg-customGreen-button rounded-md text-white p-4 grid place-items-center font-bold disabled:opacity-50">
                             {formLoading ? <Spinner /> : <span>Wyślij</span>}
                         </button>

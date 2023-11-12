@@ -12,6 +12,7 @@ export const useOfferModal = (
     const [formError, setFormError] = useState("")
     const [formLoading, setFormLoading] = useState(false)
     const [formSuccess, setFormSuccess] = useState(false)
+	const [captcha, setCaptcha] = useState<string | null>()
 
     const handleName = (val: string) => {
         setName(val)
@@ -58,7 +59,8 @@ export const useOfferModal = (
                 body: JSON.stringify({
                     name,
                     email,
-                    offer: pickedOffer
+                    offer: pickedOffer,
+					captcha
                 })
             })
             if (res.ok) {
@@ -85,6 +87,8 @@ export const useOfferModal = (
         formSuccess,
         name,
         email,
+		setCaptcha,
+		captcha,
         setName,
         setNameIsValid,
         setEmail,

@@ -1,4 +1,4 @@
-export const LetsMeetContent = () => {
+export const LetsMeetContentSecond = () => {
     return (
         <section className="w-full bg-customGreen-bluredBackground/75 p-4 rounded-md lg:w-full flex-1 flex flex-col lg:text-lg gap-12">
             <p className="font-bold xl:w-5/6">
