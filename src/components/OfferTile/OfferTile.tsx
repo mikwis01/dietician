@@ -5,6 +5,7 @@ import check from "../../assets/check.png"
 
 export const OfferTile: React.FC<OfferTileInterface> = ({
     price,
+	time,
     header,
     items,
     isLastItem,
@@ -19,7 +20,7 @@ export const OfferTile: React.FC<OfferTileInterface> = ({
                 <p className="text-sm drop-shadow-lg">{header}</p>
                 <h3 className="text-2xl">
                     {price} zł
-                    <span className="text-sm"> /1 godzina</span>
+                    <span className="text-sm"> /{time}</span>
                 </h3>
             </div>
             <div className="px-4 pt-8 pb-4">

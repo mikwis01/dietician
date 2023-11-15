@@ -113,6 +113,7 @@ export const offerTiles = [
     {
         header: "Pierwsza konsultacja",
         price: 230,
+		time: "40-60 min",
         items: [
             "szczegółowy wywiad żywieniowo-zdrowotny",
             "interpretacja wyników badań",
@@ -127,6 +128,7 @@ export const offerTiles = [
     {
         header: "Kolejna konsultacja",
         price: 150,
+		time: "30 min",
         items: [
             "analiza i omówienie dotychczasowych postępów dietoterapii",
             "weryfikacja wcześniejszej strategii działania i ustalenie nowej",
@@ -141,6 +143,7 @@ export const offerTiles = [
     {
         header: "Konsultacja dietetyczno-zdrowotna",
         price: 130,
+		time: "40-60 min",
         items: [
             "szczegółowy wywiad żywieniowo-zdrowotny",
             "analiza dotychczasowego żywienia i stylu życia oraz omówienie błędów",

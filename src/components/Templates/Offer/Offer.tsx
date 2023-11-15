@@ -42,6 +42,7 @@ export const Offer = () => {
                         <OfferTile
                             key={offer.header}
                             header={offer.header}
+							time={offer.time}
                             price={offer.price}
                             items={offer.items}
                             isLastItem={i === offerTiles.length - 1}

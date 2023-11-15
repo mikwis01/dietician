@@ -20,6 +20,7 @@ export interface PillarInterface {
 export interface OfferTileInterface {
     header: string
     price: number
+	time: string
     items: string[]
     isLastItem: boolean
     handleOfferModal: (offer: string) => void
