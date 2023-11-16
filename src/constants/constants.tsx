@@ -4,7 +4,7 @@ import icon3 from "../assets/icon_3.webp"
 import icon4 from "../assets/icon_4.webp"
 import icon5 from "../assets/icon_5.webp"
 import icon6 from "../assets/icon_6.webp"
-import icon7 from "../assets/icon_7.webp"
+// import icon7 from "../assets/icon_7.webp"
 import dish_tray from "../assets/dish-tray.png"
 import heart from "../assets/plus-heart.png"
 import brain from "../assets/brain.png"
@@ -70,13 +70,13 @@ export const partnershipValues = [
 ]
 
 export const contactLinks = [
-    {
-        icon: icon7,
-        content: "+48 333 444 555"
-    },
+    // {
+    //     icon: icon7,
+    //     content: "+48 333 444 555"
+    // },
     {
         icon: icon6,
-        content: "kontakt@martazarazinska.pl"
+        content: "multidiet.bydgoszcz@gmail.com"
     }
 ]
 
